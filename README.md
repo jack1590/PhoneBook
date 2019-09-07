@@ -18,12 +18,15 @@ Then navigate to [localhost:8080](http://localhost:8080) in your browser
 
 ## Swagger documentation
 
-    http://localhost:8080/swagger-ui.html
+Swagger documentation is available [here](http://localhost:8080/swagger-ui.html)
 
 ## Run tests
-```mvn site```
 
-When it's done report will be available in ```/phonebook/target/site/surefire-report.html```
+    mvn test
+    
+## Postman collection
+
+to use postman this is a ready [collection](https://github.com/jack1590/PhoneBook/blob/master/src/main/resources/PhoneBook.postman_collection.json)
 
 # REST API
 
