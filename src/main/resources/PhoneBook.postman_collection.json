@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "dd865461-1cee-4a2f-9b49-985ffde06a08",
+		"name": "PhoneBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filterParam\": \"jack\",\n\t\"sort\":{\n\t\t\"order\": \"ASC\",\n\t\t\"field\": \"firstName\"\n\t},\n\t\"page\": 0,\n\t\"size\": 10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/contacts/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"contacts",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"prefix\": \"Miss\",\n\t\"firstName\": \"Karen\",\n\t\"middleName\": \"Alejandra\",\n\t\"lastName\": \"Prieto\",\n\t\"phone\": \"3102979521\",\n\t\"email\": \"kalejapb@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
