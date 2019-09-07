@@ -1,0 +1,20 @@
+spring:
+  #DATASOURCE
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    name: phonebook
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:${mariaDB4j.port}/${spring.datasource.name}?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=US/Eastern
+    username: root
+    password:
+
+  #JACKSON
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+      indent-output: false
+
+#MARIADB
+mariaDB4j:
+  port: 3309
