@@ -1,0 +1,33 @@
+version: "3.1"
+# https://docs.docker.com/compose/compose-file/
+
+services:
+  app:
+    image: phonebook
+    container_name: docker-app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/phonebook
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_HOST=docker-mysql
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root
+      - DATABASE_NAME=phonebook
+      - DATABASE_PORT=3306
+      - SPRING_PROFILES_ACTIVE=container
+    depends_on:
+      - docker-mysql
+    links:
+      - docker-mysql
+  docker-mysql:
+    image: mysql:5.7.18
+    container_name: docker-mysql
+    environment:
+      - MYSQL_DATABASE=phonebook
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
