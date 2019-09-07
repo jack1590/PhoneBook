@@ -1,8 +1,9 @@
-# REST API phone book application
+# REST API Phone book application
 
 Phone book Rest API
 
 ## Requirements
+    Java 8
     Maven
     Docker
 
@@ -26,7 +27,7 @@ Swagger documentation is available [here](http://localhost:8080/swagger-ui.html)
     
 ## Postman collection
 
-to use postman this is a ready [collection](https://github.com/jack1590/PhoneBook/blob/master/src/main/resources/PhoneBook.postman_collection.json)
+To use postman this is a ready [collection](https://github.com/jack1590/PhoneBook/blob/master/src/main/resources/PhoneBook.postman_collection.json)
 
 # REST API
 
